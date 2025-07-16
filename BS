@@ -1,0 +1,5 @@
+<connectionStrings>
+  <add name="OracleDB"
+       connectionString="User Id=YOUR_USERNAME;Password=YOUR_PASSWORD;Data Source=YOUR_TNS_OR EZCONNECT;"
+       providerName="Oracle.ManagedDataAccess.Client" />
+</connectionStrings>
