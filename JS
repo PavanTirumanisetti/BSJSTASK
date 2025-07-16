@@ -1,0 +1,10 @@
+CREATE TABLE Employees (
+    Id NUMBER PRIMARY KEY,
+    Name NVARCHAR2(100),
+    Position NVARCHAR2(100),
+    Department NVARCHAR2(100)
+);
+
+INSERT INTO Employees VALUES (1, 'Alice', 'Manager', 'HR');
+INSERT INTO Employees VALUES (2, 'Bob', 'Developer', 'IT');
+COMMIT;
