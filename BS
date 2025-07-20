@@ -1,5 +1,53 @@
-<connectionStrings>
-  <add name="OracleDB"
-       connectionString="User Id=YOUR_USERNAME;Password=YOUR_PASSWORD;Data Source=YOUR_TNS_OR EZCONNECT;"
-       providerName="Oracle.ManagedDataAccess.Client" />
-</connectionStrings>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ReportApp.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Report Management System</title>
+    
+    <!-- Add your custom CSS -->
+    <link href="css/customstylesheet.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Bootstrap (if using) -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/Homepage">Report System</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Only keep Home link active -->
+                        <li><a runat="server" href="~/Homepage">Home</a></li>
+                        <!-- Remove other navigation links if not needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <!-- Main content will be injected here -->
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Report Management System</p>
+            </footer>
+        </div>
+
+        <!-- Add scripts at bottom -->
+        <script src="Scripts/jquery-3.4.1.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>
